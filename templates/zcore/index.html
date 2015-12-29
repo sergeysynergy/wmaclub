@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block side_bar %}
+<div id="heap-info"></div>
+<script src="{% static 'react/build/HeapInfo.js' %}"></script>
+
+<div id="newProjectFilter">NewProjectFilter</div>
+<script src="{% static 'react/build/NewProjectFilter.js' %}"></script>
+
+{% endblock side_bar %}
+
+
+{% block content %}
+<h1>Проекты</h1>
+<ul>
+{% for graph in graphs %}
+    <li>
+        <a href="/admin/zcore/graph/{{ graph.id }}" target=blank>id {{ graph.id }}</a>
+        -
+        <a href="{% url 'viewForceD3' graph.id '' '' '' %}" target=blank>{{ graph.title }}: </a> 
+    </li>
+{% endfor %}
+</ul>
+
+{% endblock content %}
+
+
