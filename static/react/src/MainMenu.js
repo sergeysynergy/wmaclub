@@ -1,48 +1,50 @@
 var links = [
-    {'link': '/timeline/' + gid, 'title': 'Временная гистограмма'},
-    {'link': '/force-react/' + gid + '//', 'title': 'Граф-react'},
-    {'link': '/force-d3/' + gid + '////', 'title': 'Граф-d3'},
-    {'link': '/chord/' + gid, 'title': 'Круговая диаграмма'},
+    {'link': '/about/', 'title': 'Мы'},
+    {'link': '/club/', 'title': 'Клуб'},
+    {'link': '/price/', 'title': 'Стоимость'},
+    {'link': '/cafe-wma/', 'title': 'WMA кафе'},
+    {'link': '/blog/', 'title': 'Блог'},
+    {'link': '#map', 'title': 'Контакты'},
+    {'link': '#win1', 'title': 'Запись в клуб'},
 ]
-
 
 var MainMenu = React.createClass({
     render: function() {
         var rowsLinks = []
-        if (gid) {
-            this.props.links.forEach(function(prop, key) {
-                rowsLinks.push(<MenuLink 
-                    key={key}
-                    link={prop.link}
-                    title={prop.title}
-                />)
-            }.bind(this))
-        }
+        this.props.links.forEach(function(prop, key) {
+            rowsLinks.push(<MenuLink 
+                key={key}
+                link={prop.link}
+                title={prop.title}
+            />)
+        }.bind(this))
 
         return (
-            <nav className="navbar navbar-inverse navbar-fixed-top">
-                <div className="container">
-                    <div className="navbar-header">
-                        <a className="navbar-brand" href="#">Проект id {gid}</a>
-                    </div>
-                    <div id="navbar" className="navbar-collapse collapse">
-                        <ul className="nav navbar-nav">
-                            {rowsLinks}
-                        </ul>
-                        <ul className="nav navbar-nav navbar-right">
-                            <li><a href="/">Проекты</a></li>
-                        </ul>
+            <div className="navbar navbar-inverse navbar-fixed-top">
+                <div className="navbar-inner">
+                    <div className="container">
+                        <a className="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span className="icon-bar"></span>
+                            <span className="icon-bar"></span>
+                            <span className="icon-bar"></span>
+                        </a>
+                        <div className="nav-collapse collapse">
+                            <ul className="nav">
+                                <li>+7 (499) 600 40 70</li>
+                                {rowsLinks}
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </nav>
+            </div>
         )
     },
 })
+                        //<a className="brand" href="index.html"><img src={'../img/logo-sm.png'} /></a>
 
 
 var MenuLink = React.createClass({
     render: function() {
-        this.gid = gid
         return (
             <li><a href={this.props.link}>{this.props.title}</a></li>
         )

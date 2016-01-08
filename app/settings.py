@@ -40,7 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     # Подключение дополнительных сторонних приложений
-    #'django-rest-framework'
+    'rest_framework',
     #'twitter_bootstrap',
     #'bootstrap3',
 

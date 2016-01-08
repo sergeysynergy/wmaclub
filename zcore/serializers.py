@@ -2,16 +2,27 @@
 from django.forms import widgets
 from django.contrib.auth.models import User
 from rest_framework import serializers
+from rest_framework.views import APIView
+from rest_framework.response import Response
+
+from .models import *
 
 
-"""
-class ObrIndicatorSerializer(serializers.ModelSerializer):
+class NewsSerializer(serializers.ModelSerializer):
     class Meta:
-        model = ObrIndicator
-        fields = ('pk', 'stage', 'procent')
+        model = News
+        fields = ('pk', 'title', 'body')
         order_by = 'pk'
 
 
+class FormsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Form
+        fields = ('pk', 'name', 'e_mail', 'phone', 'body')
+        order_by = 'pk'
+
+
+"""
 class ObrProgressSerializer(serializers.ModelSerializer):
     indicator = ObrIndicatorSerializer(many=True, read_only=True)
 
