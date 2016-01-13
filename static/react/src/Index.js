@@ -985,7 +985,7 @@ var News = React.createClass({
     },
     render: function() {
         rows = []
-        console.log('data',this.state.data)
+        //console.log('data',this.state.data)
         this.state.data.forEach(function(news) {
             rows.push(<div className="third" key={news.pk}>
                 <p className="serif-16">
@@ -1003,8 +1003,23 @@ var News = React.createClass({
 })
 
 
+var Record = React.createClass({
+	getInitialState: function() {
+		return {value: 'Hello!'};
+	},
+	handleChange: function(event) {
+		this.setState({value: event.target.value.substr(0, 140)});
+    },
+	render: function() {
+	var value = this.state.value;
+		return (
+			<input type="text" value={value} onChange={this.handleChange} />
+		)
+	}
+})
 
 
-React.render( <Index/>, mountIndex)
+//React.render( <Index/>, mountIndex)
+React.render( <Record/>, mountRecord)
 
 

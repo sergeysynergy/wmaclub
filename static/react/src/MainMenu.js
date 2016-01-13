@@ -1,9 +1,9 @@
 var links = [
-    {'link': '/about/', 'title': 'Мы'},
-    {'link': '/club/', 'title': 'Клуб'},
-    {'link': '/price/', 'title': 'Стоимость'},
-    {'link': '/cafe-wma/', 'title': 'WMA кафе'},
-    {'link': '/blog/', 'title': 'Блог'},
+    {'link': '/static/html/about.html', 'title': 'Мы'},
+    {'link': '/static/html/club.html', 'title': 'Клуб'},
+    {'link': '/static/html/price.html', 'title': 'Стоимость'},
+    {'link': '/static/html/cafe-wma.html', 'title': 'WMA кафе'},
+    {'link': '/static/html/blog.html', 'title': 'Блог'},
     {'link': '#map', 'title': 'Контакты'},
     {'link': '#win1', 'title': 'Запись в клуб'},
 ]
@@ -28,6 +28,7 @@ var MainMenu = React.createClass({
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
                         </a>
+                        <a className="brand" href="index.html"><img src={'/static/img/logo-sm.png'} /></a>
                         <div className="nav-collapse collapse">
                             <ul className="nav">
                                 <li>+7 (499) 600 40 70</li>
@@ -40,7 +41,6 @@ var MainMenu = React.createClass({
         )
     },
 })
-                        //<a className="brand" href="index.html"><img src={'../img/logo-sm.png'} /></a>
 
 
 var MenuLink = React.createClass({

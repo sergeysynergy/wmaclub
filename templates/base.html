@@ -21,7 +21,8 @@
     <!-- JavaScript
     ================================================== -->
     <script src="{% static 'jquery/jquery-1.11.3.min.js' %}"></script>
-    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="/static/html/bootstrap-collapse.js"></script>
+    <link href="/static/html/main.css" rel="stylesheet" type="text/css" />
     <script src="{% static 'react/react.js' %}"></script>
     <script src="{% static 'react/JSXTransformer.js' %}"></script>
 
@@ -41,7 +42,6 @@
         <div id="main-menu">MainMenu</div>
         <script src="{% static 'react/build/MainMenu.js' %}"></script>
     </div>
-    <div class="clear"></div>
 
     <div id="content">
     {% block content %}

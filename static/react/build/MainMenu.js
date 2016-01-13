@@ -1,9 +1,9 @@
 var links = [
-    {'link': '/about/', 'title': 'Мы'},
-    {'link': '/club/', 'title': 'Клуб'},
-    {'link': '/price/', 'title': 'Стоимость'},
-    {'link': '/cafe-wma/', 'title': 'WMA кафе'},
-    {'link': '/blog/', 'title': 'Блог'},
+    {'link': '/static/html/about.html', 'title': 'Мы'},
+    {'link': '/static/html/club.html', 'title': 'Клуб'},
+    {'link': '/static/html/price.html', 'title': 'Стоимость'},
+    {'link': '/static/html/cafe-wma.html', 'title': 'WMA кафе'},
+    {'link': '/static/html/blog.html', 'title': 'Блог'},
     {'link': '#map', 'title': 'Контакты'},
     {'link': '#win1', 'title': 'Запись в клуб'},
 ]
@@ -28,6 +28,7 @@ var MainMenu = React.createClass({displayName: "MainMenu",
                             React.createElement("span", {className: "icon-bar"}), 
                             React.createElement("span", {className: "icon-bar"})
                         ), 
+                        React.createElement("a", {className: "brand", href: "index.html"}, React.createElement("img", {src: '/static/img/logo-sm.png'})), 
                         React.createElement("div", {className: "nav-collapse collapse"}, 
                             React.createElement("ul", {className: "nav"}, 
                                 React.createElement("li", null, "+7 (499) 600 40 70"), 
@@ -40,7 +41,6 @@ var MainMenu = React.createClass({displayName: "MainMenu",
         )
     },
 })
-                        //<a className="brand" href="index.html"><img src={'../img/logo-sm.png'} /></a>
 
 
 var MenuLink = React.createClass({displayName: "MenuLink",

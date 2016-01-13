@@ -3,6 +3,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 from zcore.views import *
+import app.settings as settings
 
 
 urlpatterns = [
@@ -12,6 +13,8 @@ urlpatterns = [
 ]
 
 urlpatterns += [
+    url(r'^static/(?P<path>.*)$', 'django.views.static.serve',{'document_root': settings.URL_STATIC_ROOT}),
+
     url(r'^$', 'zcore.views.index', name='index'),
     #url(r'^timeline/(?P<id>[-\w]+)/$', 'zcore.views.view_timeline', name='viewTimeline'),
 

@@ -114,6 +114,9 @@ STATIC_URL = '/static/'
 # Каталог статических файлов проекта
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+# Абсолютный путь к каталогу со статическими файлами для обработки ссылок к ним
+URL_STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
@@ -126,3 +129,5 @@ CACHES = {
 }
 
 
+MEDIA_ROOT = "/home/zs/work/wmaclub/dev/wmaclub/static"
+MEDIA_URL = "http://127.0.0.1:8000/static/"

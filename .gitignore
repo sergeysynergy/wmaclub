@@ -12,3 +12,4 @@ app/__pycache__/
 static/react/build/
 app/*.py~
 static/css/styles.css~
+static/css/main.css~
