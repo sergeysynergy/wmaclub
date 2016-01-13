@@ -15,7 +15,7 @@ class News(models.Model):
         return name
 
 class Form(models.Model):
-    name = models.CharField(max_length=200, default='')
+    title = models.CharField(max_length=200, default='')
     e_mail = models.CharField(max_length=200, default='')
     phone = models.CharField(max_length=200, default='')
     body = models.TextField()

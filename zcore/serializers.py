@@ -18,7 +18,7 @@ class NewsSerializer(serializers.ModelSerializer):
 class FormsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Form
-        fields = ('pk', 'name', 'e_mail', 'phone', 'body')
+        fields = ('pk', 'title', 'e_mail', 'phone', 'body')
         order_by = 'pk'
 
 

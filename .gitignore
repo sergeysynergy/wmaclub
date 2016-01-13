@@ -1,0 +1,14 @@
+.gitignore~
+*.*.swp
+*.*.swo
+static/react/src/*.js~
+static/*.js~
+syscheck/__pycache__/
+zcore/__pycache__/
+zcore/*.py~
+templates/zcore/*.html~
+templates/*.html~
+app/__pycache__/
+static/react/build/
+app/*.py~
+static/css/styles.css~
